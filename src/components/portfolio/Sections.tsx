@@ -123,25 +123,43 @@ export function About() {
 }
 
 export function Technologies() {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const scrollBy = (dir: number) => {
+    const el = trackRef.current;
+    if (!el) return;
+    el.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: "smooth" });
+  };
+  const arrowBtn =
+    "absolute top-1/2 z-10 -translate-y-1/2 rounded-full border border-border bg-background/90 p-2 text-muted-foreground backdrop-blur transition hover:border-primary hover:text-primary";
   return (
     <section id="tecnologias" className={`${container} py-24`}>
       <SectionHeading label="02 — Stack" title="Tecnologias e ferramentas">
         Tecnologias que utilizo e estudo no meu dia a dia.
       </SectionHeading>
-      <div className="space-y-10">
-        {techGroups.map((g) => (
-          <Reveal key={g.title}>
-            <h3 className="mb-4 text-sm font-semibold text-muted-foreground">{g.title}</h3>
-            <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
-              {g.items.map((t) => (
-                <li key={t.name} className="flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 transition hover:-translate-y-0.5 hover:border-primary/60">
-                  <img src={`https://cdn.simpleicons.org/${t.icon}/A5ACB8`} alt="" width={20} height={20} loading="lazy" />
-                  <span className="text-sm font-medium">{t.name}</span>
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-        ))}
+      <div className="relative">
+        <button type="button" aria-label="Tecnologias anteriores" onClick={() => scrollBy(-1)} className={`${arrowBtn} -left-3`}>
+          <ChevronLeft size={18} />
+        </button>
+        <div
+          ref={trackRef}
+          role="list"
+          aria-label="Tecnologias"
+          className="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth py-2 pl-1 pr-10"
+        >
+          {techGroups.flatMap((g) => g.items).map((t) => (
+            <div
+              key={t.name}
+              role="listitem"
+              className="flex min-w-[110px] snap-start flex-col items-center gap-3 rounded-xl border border-border bg-card px-4 py-5 transition hover:-translate-y-0.5 hover:border-primary/60"
+            >
+              <img src={`https://cdn.simpleicons.org/${t.icon}/A78BFA`} alt={`Ícone do ${t.name}`} width={28} height={28} loading="lazy" />
+              <span className="text-xs font-medium text-muted-foreground">{t.name}</span>
+            </div>
+          ))}
+        </div>
+        <button type="button" aria-label="Próximas tecnologias" onClick={() => scrollBy(1)} className={`${arrowBtn} -right-3`}>
+          <ChevronRight size={18} />
+        </button>
       </div>
     </section>
   );
