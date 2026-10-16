@@ -83,10 +83,7 @@ export function Hero() {
           Transformando ideias em experiências digitais.
         </p>
         <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-          Sou uma desenvolvedora web apaixonada por tecnologia, criação de soluções digitais e aprendizado contínuo. Gosto de
-          transformar ideias em projetos funcionais, desenvolver interfaces intuitivas e explorar novas possibilidades por meio
-          da programação. Meu objetivo é evoluir constantemente como profissional, aprimorar minhas habilidades e contribuir
-          para projetos que gerem impacto real.
+          Sou desenvolvedora Full Stack com foco no desenvolvimento de aplicações web e soluções de software, atuando tanto no front-end quanto no back-end. Gosto de transformar ideias e necessidades reais em sistemas funcionais, intuitivos e eficientes, buscando unir uma boa experiência de usuário a um código limpo, organizado e escalável. Estou sempre explorando novas tecnologias, aprimorando minhas habilidades e buscando soluções que vão além do básico. Neste portfólio, apresento alguns dos meus projetos, tecnologias e desafios que fazem parte da minha evolução como desenvolvedora.
         </p>
         <div className="mt-10 flex flex-wrap items-center gap-4">
           <a href="#projetos" className={btnPrimary}>Ver meus projetos <ArrowRight size={16} /></a>

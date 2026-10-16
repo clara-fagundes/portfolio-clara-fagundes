@@ -2,9 +2,9 @@
 
 export const profile = {
   name: "Clara Fagundes",
-  email: "seu-email@exemplo.com", // TODO: substitua pelo seu e-mail real
-  github: "https://github.com/", // TODO: link do seu GitHub
-  linkedin: "https://www.linkedin.com/", // TODO: link do seu LinkedIn
+  email: "cfagundes236@gmail.com", //
+  github: "https://github.com/clara-fagundes", 
+  linkedin: "https://www.linkedin.com/in/clara-fagundes", 
 };
 
 export const highlights = [
@@ -18,7 +18,7 @@ export type Tech = { name: string; icon: string };
 export const techGroups: { title: string; items: Tech[] }[] = [
   {
     title: "Front-end",
-    items: [
+    items: [  
       { name: "HTML5", icon: "html5" },
       { name: "CSS3", icon: "css" },
       { name: "JavaScript", icon: "javascript" },
