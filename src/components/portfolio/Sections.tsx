@@ -1,5 +1,5 @@
-import { useState, type FormEvent } from "react";
-import { ArrowRight, ExternalLink, Github, Linkedin, Mail, Menu, X, Code2, FolderOpen } from "lucide-react";
+import { useRef, useState, type FormEvent } from "react";
+import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github, Linkedin, Mail, Menu, X, Code2, FolderOpen } from "lucide-react";
 import { highlights, profile, projects, techGroups } from "@/data/portfolio";
 import { Reveal, SectionHeading } from "./Reveal";
 
